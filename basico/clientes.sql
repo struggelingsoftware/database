@@ -26,9 +26,7 @@ DELETE FROM Clientes WHERE cliente_id = 1;
 
 
 
--- To keep things organized, we use primary keys and foreign keys. A primary key is a unique ID for each row, like a customer ID. Foreign keys link tables together, creating relationships.
-
-
+-- Para mantener las cosas organizadas, usamos claves primarias y claves foráneas. Una clave primaria es un ID único para cada fila, como un ID de cliente. Las claves foráneas vinculan tablas, creando relaciones.
 
 
 CREATE TABLE Pedidos (
