@@ -43,3 +43,4 @@ INSERT INTO Empleados_3NF (ID_Empleado, Nombre, ID_Departamento) VALUES
     (1, 'Juan Pérez', 1),
     (2, 'Ana García', 2),
     (3, 'Luis López', 1);
+
