@@ -2,12 +2,17 @@ CREATE TABLE Clientes (
     cliente_id INT PRIMARY KEY,
     nombre VARCHAR(255),
     apellido VARCHAR(255),
-    correo_electronico VARCHAR(255)
+    correo_electronico VARCHAR(255),
+    edad INT,
+    pais VARCHAR(100),
+    ciudad VARCHAR(100)
 );
 
+INSERT INTO Clientes (cliente_id, nombre, apellido, correo_electronico, edad, pais, ciudad) 
+VALUES (1, 'Juan', 'Perez', 'juan.perez@example.com', 25, 'Estados Unidos', 'Houston');
 
-INSERT INTO Clientes (cliente_id, nombre, apellido, correo_electronico) 
-VALUES (1, 'Sheldon', 'Maiz', 'sheldon.maiz@example.com');
+INSERT INTO Clientes (nombre, apellido, correo_electronico, edad, pais, ciudad)
+VALUES ('María', 'Gómez', 'maria.gomez@example.com', 30, 'España', 'Madrid');
 
 
 SELECT * FROM Clientes;
@@ -38,6 +43,12 @@ CREATE TABLE Pedidos (
 );
 
 
+-- Insertar datos en la tabla Clientes
+INSERT INTO Clientes (cliente_id, nombre, apellido, correo_electronico, edad, pais, ciudad)
+VALUES (3, 'Carlos', 'González', 'carlos.gonzalez@example.com', 40, 'México', 'Ciudad de México');
+INSERT INTO Clientes (cliente_id, nombre, apellido, correo_electronico, edad, pais, ciudad)
+VALUES (4, 'Ana', 'Martínez', 'ana.martinez@example.com', 35, 'Argentina', 'Buenos Aires');
+
 
 -- Insertar datos en la tabla Pedidos
 INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (1, '2024-12-28', 85.75);
@@ -45,10 +56,7 @@ INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (2, '2024-12-29', 2
 INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (3, '2024-12-29', 55.30);
 INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (1, '2024-12-30', 120.90);
 INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (4, '2024-12-30', 35.60);
--- Insertar datos en la tabla Clientes
-INSERT INTO Clientes (nombre, apellido) VALUES ('Ana', 'García');
-INSERT INTO Clientes (nombre, apellido) VALUES ('Luis', 'Martínez');
-INSERT INTO Clientes (nombre, apellido) VALUES ('Sofía', 'Rodríguez');
-INSERT INTO Clientes (nombre, apellido) VALUES ('Carlos', 'López');
-INSERT INTO Clientes (nombre, apellido) VALUES ('Laura', 'Fernández');
+
+
+
 
