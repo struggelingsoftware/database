@@ -1,3 +1,10 @@
+-- Crear la tabla Departamentos
+CREATE TABLE Departamentos (
+    department_id INT PRIMARY KEY,
+    department_name VARCHAR(255) NOT NULL
+);
+
+
 -- Crear la tabla Estudiantes
 CREATE TABLE Estudiantes (
     student_id INT PRIMARY KEY,
@@ -28,21 +35,16 @@ CREATE TABLE Instructores (
     FOREIGN KEY (department_id) REFERENCES Departamentos(department_id)
 );
 
--- Crear la tabla Departamentos
-CREATE TABLE Departamentos (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(255) NOT NULL
-);
-
 -- Crear la tabla Inscripciones
 CREATE TABLE Inscripciones (
     enrollment_id INT PRIMARY KEY,
     student_id INT,
     course_id INT,
-    grade DECIMAL(1, 1),
+    grade DECIMAL(2, 1),
     FOREIGN KEY (student_id) REFERENCES Estudiantes(student_id),
     FOREIGN KEY (course_id) REFERENCES Cursos(course_id)
 );
+
 
 
 -- Insertar datos en la tabla Departamentos

@@ -1,4 +1,16 @@
+CREATE TABLE Clientes (
+    cliente_id INT PRIMARY KEY AUTO_INCREMENT, 
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255) NOT NULL
+);
 
+CREATE TABLE Pedidos (
+    pedido_id INT PRIMARY KEY AUTO_INCREMENT, 
+    cliente_id INT,
+    fecha_pedido DATE,
+    total DECIMAL(10, 2), -- Ajusta la precisión y la escala según sea necesario
+    FOREIGN KEY (cliente_id) REFERENCES Clientes(cliente_id) -- Asumiendo que 'cliente_id' referencia la tabla 'Clientes'
+);
 
 -- Insertar datos en la tabla Pedidos
 INSERT INTO Pedidos (cliente_id, fecha_pedido, total) VALUES (1, '2024-12-28', 85.75);
